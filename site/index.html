@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>IntelliLight – Reinforcement Learning Traffic Control</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+font-family:'Inter',sans-serif;
+background:#0f172a;
+color:#e2e8f0;
+}
+
+.section{
+max-width:1100px;
+margin:auto;
+padding:80px 20px;
+}
+
+.card{
+background:#111827;
+border:1px solid rgba(255,255,255,0.05);
+border-radius:10px;
+padding:28px;
+}
+
+.arch-box{
+background:#111827;
+border:1px solid rgba(255,255,255,0.06);
+border-radius:8px;
+padding:20px;
+text-align:center;
+}
+
+.chart-card{
+background:#111827;
+padding:20px;
+border-radius:10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="section text-center">
+
+<h1 class="text-6xl font-bold mb-6 text-white">
+IntelliLight
+</h1>
+
+<p class="text-xl text-slate-300 mb-4">
+Reinforcement Learning Traffic Signal Control
+</p>
+
+<p class="max-w-3xl mx-auto text-slate-400 mb-8">
+A reinforcement learning approach to adaptive traffic signal control trained in SUMO
+and evaluated against traditional traffic management strategies.
+</p>
+
+<div class="flex justify-center gap-3 flex-wrap mb-10">
+
+<span class="px-4 py-2 bg-slate-800 text-sm rounded">PPO Reinforcement Learning</span>
+<span class="px-4 py-2 bg-slate-800 text-sm rounded">SUMO Traffic Simulation</span>
+<span class="px-4 py-2 bg-slate-800 text-sm rounded">Adaptive Signal Control</span>
+
+</div>
+
+<a href="https://github.com/YOUR_USERNAME/intellilight"
+class="bg-blue-600 px-6 py-3 rounded text-white hover:bg-blue-500 transition">
+
+View Source Code
+
+</a>
+
+</div>
+
+<!-- PROBLEM -->
+
+<div class="section">
+
+<h2 class="text-3xl font-semibold mb-6 text-white">
+The Problem
+</h2>
+
+<p class="text-slate-300 leading-relaxed max-w-4xl">
+
+Traditional traffic signals rely on fixed timers that cannot adapt to real-time congestion.
+This leads to inefficient signal timing and unnecessary waiting during peak hours.
+
+This project explores how reinforcement learning can dynamically allocate green signal durations
+based on live traffic conditions to improve traffic flow and reduce congestion.
+
+</p>
+
+</div>
+
+<!-- ARCHITECTURE -->
+
+<div class="section">
+
+<h2 class="text-3xl font-semibold mb-12 text-white">
+System Architecture
+</h2>
+
+<div class="flex flex-col items-center gap-6">
+
+<div class="arch-box w-full md:w-2/3">
+SUMO Traffic Simulation
+</div>
+
+<div>↓</div>
+
+<div class="arch-box w-full md:w-2/3">
+Traffic State Extraction (queues, waiting time, phase state)
+</div>
+
+<div>↓</div>
+
+<div class="arch-box w-full md:w-2/3">
+PPO Reinforcement Learning Agent
+</div>
+
+<div>↓</div>
+
+<div class="arch-box w-full md:w-2/3">
+Adaptive Signal Controller
+</div>
+
+<div>↓</div>
+
+<div class="arch-box w-full md:w-2/3">
+Adaptive Traffic Signal Optimization
+</div>
+
+</div>
+
+</div>
+
+<!-- RESULTS -->
+
+<div class="section">
+
+<h2 class="text-3xl font-semibold mb-6 text-white">
+Performance Results
+</h2>
+
+<p class="text-slate-400 max-w-4xl mb-10">
+
+Evaluation was conducted across multiple simulation episodes using three traffic scenarios:
+<strong>Morning Rush, Evening Rush, and Weekend</strong> traffic patterns.
+
+IntelliLight is compared against two widely used baseline controllers:
+<strong>Fixed Timer</strong> and <strong>Max-Pressure</strong>.
+
+</p>
+
+<div class="grid md:grid-cols-3 gap-8">
+
+<div class="chart-card">
+<canvas id="waitChart"></canvas>
+</div>
+
+<div class="chart-card">
+<canvas id="throughputChart"></canvas>
+</div>
+
+<div class="chart-card">
+<canvas id="queueChart"></canvas>
+</div>
+
+</div>
+
+<div class="text-center mt-10 text-lg text-slate-300">
+
+<strong class="text-white">Key Result:</strong>
+IntelliLight reduces average vehicle waiting time by <strong>~40%</strong>
+while maintaining comparable throughput to traditional traffic controllers.
+
+</div>
+
+</div>
+
+<!-- DEMO -->
+
+<div class="section">
+
+<h2 class="text-3xl font-semibold mb-10 text-white">
+Simulation Demo
+</h2>
+
+<div class="aspect-video rounded overflow-hidden border border-slate-700">
+
+<iframe
+class="w-full h-full"
+src="https://www.youtube.com/embed/2X6pQ3QY0jM"
+frameborder="0"
+allowfullscreen>
+</iframe>
+
+</div>
+
+<p class="text-center text-slate-400 mt-4 text-sm">
+Simulation demonstration (placeholder video – actual IntelliLight simulation coming soon)
+</p>
+
+</div>
+
+<!-- TECH SPECS -->
+
+<div class="section">
+
+<h2 class="text-3xl font-semibold mb-10 text-white">
+Technical Specifications
+</h2>
+
+<div class="grid md:grid-cols-2 gap-6">
+
+<div class="card">
+<strong>Environment</strong><br>
+SUMO microscopic traffic simulator
+</div>
+
+<div class="card">
+<strong>Agent</strong><br>
+PPO (Stable-Baselines3)
+</div>
+
+<div class="card">
+<strong>Observation Space</strong><br>
+Queue length, waiting time, signal phase
+</div>
+
+<div class="card">
+<strong>Action Space</strong><br>
+Adaptive phase duration selection
+</div>
+
+<div class="card">
+<strong>Training</strong><br>
+~150k simulation steps using PPO
+</div>
+
+<div class="card">
+<strong>Baselines</strong><br>
+Fixed Timer and Max-Pressure controllers
+</div>
+
+</div>
+
+</div>
+
+<!-- FOOTER -->
+
+<div class="section text-center border-t border-slate-700">
+
+<p class="text-lg mb-6">
+Project: IntelliLight RL Traffic Control
+</p>
+
+<a href="https://github.com/YOUR_USERNAME/intellilight"
+class="bg-blue-600 px-6 py-3 rounded text-white hover:bg-blue-500 transition">
+
+GitHub Repository
+
+</a>
+
+<p class="text-slate-500 text-sm mt-8">
+Built with Reinforcement Learning • SUMO • Python • PyTorch
+</p>
+
+</div>
+
+<script>
+
+Chart.defaults.color='#cbd5f5'
+
+const options={
+responsive:true,
+plugins:{legend:{display:false}},
+scales:{y:{beginAtZero:true}}
+}
+
+new Chart(document.getElementById('waitChart'),{
+type:'bar',
+data:{
+labels:['Fixed Timer','Max Pressure','IntelliLight'],
+datasets:[{
+data:[4.3,5.7,3.3],
+backgroundColor:['#f59e0b','#ef4444','#22c55e']
+}]
+},
+options:{...options,plugins:{...options.plugins,title:{display:true,text:'Average Waiting Time (s)'}}}
+})
+
+new Chart(document.getElementById('throughputChart'),{
+type:'bar',
+data:{
+labels:['Fixed Timer','Max Pressure','IntelliLight'],
+datasets:[{
+data:[703,682,687],
+backgroundColor:['#f59e0b','#ef4444','#22c55e']
+}]
+},
+options:{...options,plugins:{...options.plugins,title:{display:true,text:'Vehicle Throughput'}}}
+})
+
+new Chart(document.getElementById('queueChart'),{
+type:'bar',
+data:{
+labels:['Fixed Timer','Max Pressure','IntelliLight'],
+datasets:[{
+data:[8.0,9.1,6.5],
+backgroundColor:['#f59e0b','#ef4444','#22c55e']
+}]
+},
+options:{...options,plugins:{...options.plugins,title:{display:true,text:'Average Queue Length'}},}
+})
+
+</script>
+
+</body>
+</html>
