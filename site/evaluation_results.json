@@ -1,0 +1,366 @@
+{
+  "model_path": "models/checkpoints/intellilight_4phase_final.zip",
+  "n_episodes": 5,
+  "scenarios": [
+    "MORNING_RUSH",
+    "EVENING_RUSH",
+    "WEEKEND"
+  ],
+  "timestamp": "2026-03-14T17:25:13.500923",
+  "results_by_scenario": {
+    "MORNING_RUSH": {
+      "Fixed-Timer": {
+        "mean": {
+          "avg_wait_time": 4.450060941043083,
+          "max_wait_time": 11.705555555555557,
+          "throughput": 711.8,
+          "avg_queue_length": 8.5,
+          "max_queue_length": 11.0,
+          "intersection_utilization": 1.0,
+          "fairness_score": 1.0001276807126507,
+          "phase_switches": 0.0,
+          "phase_switch_frequency": 0.0,
+          "starvation_events": 0.0,
+          "max_wait_per_direction": {
+            "W": 0.0,
+            "E": 0.0,
+            "N": 11.453571428571427,
+            "S": 11.430555555555557
+          }
+        },
+        "std": {
+          "avg_wait_time": 0.13418458083708404,
+          "max_wait_time": 0.2677293639959562,
+          "throughput": 38.70607187509474,
+          "avg_queue_length": 1.2155455649247229,
+          "max_queue_length": 1.2649110640673518,
+          "phase_switches": 0.0,
+          "phase_switch_frequency": 0.0,
+          "starvation_events": 0.0,
+          "intersection_utilization": 0.0,
+          "fairness_score": 8.61015389547783e-05,
+          "avg_cycle_time": 0.0
+        },
+        "n_episodes": 5
+      },
+      "Max-Pressure": {
+        "mean": {
+          "avg_wait_time": 5.595982142857143,
+          "max_wait_time": 16.5,
+          "throughput": 646.0,
+          "avg_queue_length": 8.216666666666667,
+          "max_queue_length": 10.6,
+          "intersection_utilization": 1.0,
+          "fairness_score": 0.9960391148522131,
+          "phase_switches": 0.0,
+          "phase_switch_frequency": 0.0,
+          "starvation_events": 0.0,
+          "max_wait_per_direction": {
+            "W": 0.3,
+            "E": 0.3,
+            "N": 16.06,
+            "S": 15.992857142857144
+          }
+        },
+        "std": {
+          "avg_wait_time": 0.07754229568120416,
+          "max_wait_time": 0.5868938953886339,
+          "throughput": 56.26011020252271,
+          "avg_queue_length": 1.120019841094096,
+          "max_queue_length": 1.4966629547095764,
+          "phase_switches": 0.0,
+          "phase_switch_frequency": 0.0,
+          "starvation_events": 0.0,
+          "intersection_utilization": 0.0,
+          "fairness_score": 0.0039018001951875987,
+          "avg_cycle_time": 0.0
+        },
+        "n_episodes": 5
+      },
+      "IntelliLight-RL": {
+        "mean": {
+          "avg_wait_time": 3.4669748677248675,
+          "max_wait_time": 9.73611111111111,
+          "throughput": 719.2,
+          "avg_queue_length": 7.08,
+          "max_queue_length": 8.8,
+          "intersection_utilization": 1.0,
+          "fairness_score": 1.0013176110885857,
+          "phase_switches": 0.0,
+          "phase_switch_frequency": 0.0,
+          "starvation_events": 0.0,
+          "max_wait_per_direction": {
+            "W": 0.0,
+            "E": 0.0,
+            "N": 9.505952380952381,
+            "S": 8.98611111111111
+          }
+        },
+        "std": {
+          "avg_wait_time": 0.14135600460268058,
+          "max_wait_time": 0.6700147409471078,
+          "throughput": 55.811826703665595,
+          "avg_queue_length": 0.5239168721170264,
+          "max_queue_length": 0.7483314773547882,
+          "phase_switches": 0.0,
+          "phase_switch_frequency": 0.0,
+          "starvation_events": 0.0,
+          "intersection_utilization": 0.0,
+          "fairness_score": 0.0011136641968484073,
+          "avg_cycle_time": 0.0
+        },
+        "n_episodes": 5
+      },
+      "improvements": {
+        "vs_max_pressure": {
+          "wait_time": 38.04528357635658,
+          "throughput": 11.331269349845208,
+          "queue_length": 13.833671399594321,
+          "utilization": 0.0
+        },
+        "vs_fixed_timer": {
+          "wait_time": 22.091519337435923,
+          "throughput": 1.039617870188268,
+          "queue_length": 16.705882352941178,
+          "utilization": 0.0
+        }
+      }
+    },
+    "EVENING_RUSH": {
+      "Fixed-Timer": {
+        "mean": {
+          "avg_wait_time": 4.167294501133787,
+          "max_wait_time": 11.377777777777778,
+          "throughput": 673.0,
+          "avg_queue_length": 7.2285714285714295,
+          "max_queue_length": 9.8,
+          "intersection_utilization": 1.0,
+          "fairness_score": 1.0006679017368547,
+          "phase_switches": 0.0,
+          "phase_switch_frequency": 0.0,
+          "starvation_events": 0.0,
+          "max_wait_per_direction": {
+            "W": 0.0,
+            "E": 0.0,
+            "N": 11.34920634920635,
+            "S": 11.102857142857143
+          }
+        },
+        "std": {
+          "avg_wait_time": 0.08123280987997086,
+          "max_wait_time": 0.5270606178948982,
+          "throughput": 58.872744118140105,
+          "avg_queue_length": 0.9651054716602595,
+          "max_queue_length": 1.469693845669907,
+          "phase_switches": 0.0,
+          "phase_switch_frequency": 0.0,
+          "starvation_events": 0.0,
+          "intersection_utilization": 0.0,
+          "fairness_score": 0.0011756791804440146,
+          "avg_cycle_time": 0.0
+        },
+        "n_episodes": 5
+      },
+      "Max-Pressure": {
+        "mean": {
+          "avg_wait_time": 5.680729016354016,
+          "max_wait_time": 16.44621212121212,
+          "throughput": 684.4,
+          "avg_queue_length": 9.45,
+          "max_queue_length": 12.0,
+          "intersection_utilization": 1.0,
+          "fairness_score": 0.9998381754583212,
+          "phase_switches": 0.0,
+          "phase_switch_frequency": 0.0,
+          "starvation_events": 0.0,
+          "max_wait_per_direction": {
+            "W": 0.6,
+            "E": 0.3,
+            "N": 15.52348484848485,
+            "S": 15.849675324675323
+          }
+        },
+        "std": {
+          "avg_wait_time": 0.17790135750277453,
+          "max_wait_time": 1.2409460903944944,
+          "throughput": 27.244081926172516,
+          "avg_queue_length": 0.9243616415908031,
+          "max_queue_length": 1.6733200530681511,
+          "phase_switches": 0.0,
+          "phase_switch_frequency": 0.0,
+          "starvation_events": 0.0,
+          "intersection_utilization": 0.0,
+          "fairness_score": 0.01568928834944781,
+          "avg_cycle_time": 0.0
+        },
+        "n_episodes": 5
+      },
+      "IntelliLight-RL": {
+        "mean": {
+          "avg_wait_time": 3.3345026455026456,
+          "max_wait_time": 9.62142857142857,
+          "throughput": 690.2,
+          "avg_queue_length": 6.466666666666667,
+          "max_queue_length": 8.4,
+          "intersection_utilization": 1.0,
+          "fairness_score": 1.0003353993081565,
+          "phase_switches": 0.0,
+          "phase_switch_frequency": 0.0,
+          "starvation_events": 0.0,
+          "max_wait_per_direction": {
+            "W": 0.0,
+            "E": 0.0,
+            "N": 9.588095238095237,
+            "S": 8.796190476190477
+          }
+        },
+        "std": {
+          "avg_wait_time": 0.06895777091275619,
+          "max_wait_time": 0.6167723755692256,
+          "throughput": 103.41063775066857,
+          "avg_queue_length": 1.0848450990297598,
+          "max_queue_length": 1.019803902718557,
+          "phase_switches": 0.0,
+          "phase_switch_frequency": 0.0,
+          "starvation_events": 0.0,
+          "intersection_utilization": 0.0,
+          "fairness_score": 0.00037108343061892764,
+          "avg_cycle_time": 0.0
+        },
+        "n_episodes": 5
+      },
+      "improvements": {
+        "vs_max_pressure": {
+          "wait_time": 41.301501340706736,
+          "throughput": 0.8474576271186541,
+          "queue_length": 31.56966490299823,
+          "utilization": 0.0
+        },
+        "vs_fixed_timer": {
+          "wait_time": 19.98399334159286,
+          "throughput": 2.5557206537890114,
+          "queue_length": 10.540184453227942,
+          "utilization": 0.0
+        }
+      }
+    },
+    "WEEKEND": {
+      "Fixed-Timer": {
+        "mean": {
+          "avg_wait_time": 4.311587301587301,
+          "max_wait_time": 11.811111111111112,
+          "throughput": 656.8,
+          "avg_queue_length": 7.428571428571428,
+          "max_queue_length": 9.6,
+          "intersection_utilization": 1.0,
+          "fairness_score": 1.0007107339099695,
+          "phase_switches": 0.0,
+          "phase_switch_frequency": 0.0,
+          "starvation_events": 0.0,
+          "max_wait_per_direction": {
+            "W": 0.0,
+            "E": 0.0,
+            "N": 11.477777777777778,
+            "S": 11.346666666666668
+          }
+        },
+        "std": {
+          "avg_wait_time": 0.09387900861583665,
+          "max_wait_time": 0.6067928236755917,
+          "throughput": 120.26371023712848,
+          "avg_queue_length": 1.9335913503644149,
+          "max_queue_length": 2.4166091947189146,
+          "phase_switches": 0.0,
+          "phase_switch_frequency": 0.0,
+          "starvation_events": 0.0,
+          "intersection_utilization": 0.0,
+          "fairness_score": 0.0011134113867022927,
+          "avg_cycle_time": 0.0
+        },
+        "n_episodes": 5
+      },
+      "Max-Pressure": {
+        "mean": {
+          "avg_wait_time": 5.99795611690498,
+          "max_wait_time": 16.05777777777778,
+          "throughput": 693.2,
+          "avg_queue_length": 10.437878787878788,
+          "max_queue_length": 13.0,
+          "intersection_utilization": 0.9961538461538462,
+          "fairness_score": 0.9951186086348048,
+          "phase_switches": 0.0,
+          "phase_switch_frequency": 0.0,
+          "starvation_events": 0.0,
+          "max_wait_per_direction": {
+            "W": 0.5,
+            "E": 0.5,
+            "N": 15.559999999999999,
+            "S": 15.775555555555556
+          }
+        },
+        "std": {
+          "avg_wait_time": 0.3560135212625332,
+          "max_wait_time": 0.5785208896427914,
+          "throughput": 67.35399023072056,
+          "avg_queue_length": 1.5495296836742738,
+          "max_queue_length": 1.5491933384829668,
+          "phase_switches": 0.0,
+          "phase_switch_frequency": 0.0,
+          "starvation_events": 0.0,
+          "intersection_utilization": 0.007692307692307709,
+          "fairness_score": 0.00818055129959415,
+          "avg_cycle_time": 0.0
+        },
+        "n_episodes": 5
+      },
+      "IntelliLight-RL": {
+        "mean": {
+          "avg_wait_time": 3.2808531746031746,
+          "max_wait_time": 9.466666666666667,
+          "throughput": 684.4,
+          "avg_queue_length": 6.386666666666666,
+          "max_queue_length": 8.4,
+          "intersection_utilization": 1.0,
+          "fairness_score": 1.0006419001281528,
+          "phase_switches": 0.0,
+          "phase_switch_frequency": 0.0,
+          "starvation_events": 0.0,
+          "max_wait_per_direction": {
+            "W": 0.0,
+            "E": 0.0,
+            "N": 9.095,
+            "S": 8.754999999999999
+          }
+        },
+        "std": {
+          "avg_wait_time": 0.10227849170380503,
+          "max_wait_time": 0.817584518226981,
+          "throughput": 37.792062658711814,
+          "avg_queue_length": 0.4664761515876242,
+          "max_queue_length": 0.48989794855663565,
+          "phase_switches": 0.0,
+          "phase_switch_frequency": 0.0,
+          "starvation_events": 0.0,
+          "intersection_utilization": 0.0,
+          "fairness_score": 0.0005091144820410996,
+          "avg_cycle_time": 0.0
+        },
+        "n_episodes": 5
+      },
+      "improvements": {
+        "vs_max_pressure": {
+          "wait_time": 45.300480519418414,
+          "throughput": -1.2694748990190519,
+          "queue_length": 38.81259979677748,
+          "utilization": 0.3861003861003847
+        },
+        "vs_fixed_timer": {
+          "wait_time": 23.906140706107564,
+          "throughput": 4.202192448233865,
+          "queue_length": 14.02564102564103,
+          "utilization": 0.0
+        }
+      }
+    }
+  }
+}
